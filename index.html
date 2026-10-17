@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jion's Little World 🎀</title>
+<style>
+body {
+  margin: 0;
+  padding: 25px 15px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #754b70;
+  background: linear-gradient(135deg, #fff0f7, #eee7ff, #e6f8ff);
+}
+main { max-width: 600px; margin: auto; }
+h1 { color: #d66ba6; }
+.card {
+  background: #ffffffdd;
+  border: 2px dashed #eda8d1;
+  border-radius: 25px;
+  padding: 22px;
+  margin: 22px 0;
+}
+.doodles { font-size: 28px; }
+.bunny {
+  font-size: 65px;
+  display: inline-block;
+  animation: dance .5s infinite alternate;
+}
+@keyframes dance {
+  from { transform: rotate(-12deg) translateY(0); }
+  to { transform: rotate(12deg) translateY(-10px); }
+}
+button {
+  background: #f5b5da;
+  color: #704365;
+  border: none;
+  border-radius: 25px;
+  padding: 13px 18px;
+  margin: 7px;
+  font-size: 15px;
+  cursor: pointer;
+}
+button:hover { background: #ffd9ec; }
+.message { line-height: 1.7; }
+</style>
+</head>
+<body>
+<main>
+  <div class="doodles">🎀 ✿ ♡ 🌷 ♡ ✿ 🎀</div>
+  <h1>Welcome to Jion's Little World 💗</h1>
+  <p>A little surprise made especially for you! 🇰🇷</p>
+
+  <section class="card">
+    <div class="bunny">🐰</div>
+    <div class="doodles">⭐ 💗 ⭐</div>
+    <h2>안녕, 지온! 🎀</h2>
+    <p class="message">너를 위한 작은 선물이야. 💌</p>
+    <p class="message">A little gift just for you. 💌</p>
+    <button onclick="gift()">Open Your Gift 🎁</button>
+    <p id="gift"></p>
+  </section>
+
+  <section class="card">
+    <h2>💗 Friendship Messages 💗</h2>
+    <p>너는 소중한 친구야. 🌷</p>
+    <p>You are a precious friend. 🌷</p>
+    <button onclick="message()">Another Sweet Message 💌</button>
+    <p id="message"></p>
+  </section>
+
+  <section class="card">
+    <h2>🎮 Guess the Korean Word!</h2>
+    <p>What does 사랑 mean?</p>
+    <button onclick="answer(false)">Friendship</button>
+    <button onclick="answer(true)">Love 💗</button>
+    <p id="answer"></p>
+  </section>
+
+  <section class="card">
+    <h2>💃 Dance Party!</h2>
+    <div class="bunny">🐻</div>
+    <p>우리 함께 춤추자!</p>
+    <p>Let's dance together! 🎶</p>
+    <div class="doodles">🎀 🌸 ⭐ 🧸 🌷</div>
+  </section>
+
+  <p class="doodles">Made with love, just for Jion 💗</p>
+</main>
+
+<script>
+function gift() {
+  document.getElementById("gift").innerHTML =
+    "짜잔! 너를 위한 깜짝 선물이야! 🎁💗<br>" +
+    "Ta-da! A little surprise just for you! 🌷";
+}
+function message() {
+  document.getElementById("message").innerHTML =
+    "항상 행복하길 바라! ✨<br>" +
+    "I hope you are always happy! ✨";
+}
+function answer(correct) {
+  document.getElementById("answer").textContent =
+    correct ? "정답이야! Correct! 🎉" :
+    "다시 해 봐! Try again! 🧸";
+}
+</script>
+</body>
+  </html>
+      
